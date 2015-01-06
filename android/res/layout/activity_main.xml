@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+        <Button
+            android:id="@+id/courseA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="81dp"
+            android:onClick="doAction"
+            android:text="Course A" />
+        
+
+        <Button
+            android:id="@+id/connectivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseA"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="20dp"
+         android:onClick="doAction"   
+            android:text="Try Connect" />
+      
+         
+        <EditText
+            android:id="@+id/value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/courseA"
+            android:layout_below="@+id/courseA"
+            android:inputType="numberSigned"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/testVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/value"
+            android:layout_toRightOf="@id/value"
+            android:onClick="doAction"
+            android:text="Test" />
+
+         <Button
+             android:id="@+id/stop"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/value"
+             android:layout_centerVertical="true"
+             android:onClick="doAction"
+             android:text="Stop" />
+
+         <CheckBox
+             android:id="@+id/front"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/stop"
+             android:layout_below="@+id/stop"
+             android:layout_marginTop="17dp" />
+
+         <CheckBox
+             android:id="@+id/back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/front"
+             android:layout_alignBottom="@+id/front"
+             android:layout_toRightOf="@+id/stop" />
+
+         <CheckBox
+             android:id="@+id/toque"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/right"
+             android:layout_alignBottom="@+id/right"
+             android:layout_alignRight="@+id/testVal" />
+
+         <CheckBox
+             android:id="@+id/left"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/back"
+             android:layout_alignBottom="@+id/back"
+             android:layout_alignLeft="@+id/doSpeed" />
+
+         <CheckBox
+             android:id="@+id/right"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/left"
+             android:layout_alignBottom="@+id/left"
+             android:layout_centerHorizontal="true" />
+
+         <EditText
+             android:id="@+id/time"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/speed"
+             android:layout_below="@+id/speed"
+             android:layout_toRightOf="@+id/front"
+             android:ems="10"
+              />
+
+         <Button
+             android:id="@+id/doSpeed"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/toque"
+             android:layout_marginTop="26dp"
+             android:layout_toLeftOf="@+id/toque"
+             android:onClick="doAction"
+             android:text="Do" />
+
+         <EditText
+             android:id="@+id/speed"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/right"
+             android:layout_alignTop="@+id/doSpeed"
+             android:layout_toRightOf="@+id/front"
+             android:ems="10"
+             android:inputType="number"
+             />
+
+</RelativeLayout>
